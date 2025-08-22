@@ -17,7 +17,7 @@ public class main {
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
         //Exercícios IF ELSE
-        
+        /*
         //Exercício 1
         
         System.out.print("Insira um número: ");
@@ -44,16 +44,11 @@ public class main {
         //Exercícios SWITCH CASE
         
         //Exercício 4
-  
+        */
         System.out.print("Digite um número de 1 a 7: ");
         int data = scanner.nextInt();
         String resposta4 = Funcoes.lerSemana(data);
         System.out.println(resposta4);
         scanner.nextLine();
-        
-        //Exercício 5
-        
-        System.out.println("Digite um número de 1 a 12:");
-        int mes = scanner.nextInt();
     }
 }
