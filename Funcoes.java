@@ -2,15 +2,14 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
 
-package com.mycompany.funcoes;
+package com.mycompany.exercicio2;
 
 /**
  *
- * @author alunodev10
+ * @author augus
  */
-public class Funcoes {
-    
-    /* Função Exércicio 1 */
+public class Exercicio2 {
+/* Função Exércicio 1 */
     
     public static String lerParImpar(int a){
         if(a % 2 == 0){
@@ -68,7 +67,7 @@ public class Funcoes {
         }
     }
     
-    /* Função Exércicio 4 */
+    /* Função Exércicio 5 */
     
     public static String lerMes(int a){
        switch(a){
@@ -98,6 +97,27 @@ public class Funcoes {
                 return "Dezembro";
             default:
                 return "Número não esta no intervalo de 1 a 12";
+        }
+    }
+    
+    /* Função Exércicio 6 */
+    
+    public static void lerDesconto(int a, float produto){
+       switch(a){
+           case 1:
+                produto *= 0.95;
+                System.out.println("Seu Produto 5% de desconto e custa: " + produto);
+                break;
+            case 2:
+                produto *= 0.90;
+                System.out.println("Seu Produto tem 10% de desconto e custa: " + produto);
+                break;
+            case 3:
+                produto *= 0.85;
+                System.out.println("Seu Produto 15% de desconto e custa: " + produto);
+                break;
+            default:
+                System.out.println("Número não esta no intervalo de 1 a 3");
         }
     }
     
