@@ -4,144 +4,108 @@
 
 package com.mycompany.exercicio2;
 
-import java.util.Random;
-import java.util.Scanner;
-
 /**
  *
- * @author augus
+ * @author marci
  */
 public class Exercicio2 {
+    
+    /* Função Exércicio 1 */
 
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        Random random = new Random();
-        //Exercícios IF ELSE
-        
-        //Exercício 1
-        
-        System.out.println("Insira um número!");
-        int numero = scanner.nextInt();
-        if(numero %2 == 0){
-            System.out.println("Este número é PAR!");
+        public static String lerParImpar(int a){
+            if(a % 2 == 0){
+                return "Este número é PAR!";
+            }
+            else{
+                return "Este número é IMPAR!";
+            }
+        }
+    
+    /* Função Exércicio 2 */
+    
+    public static String lerIdade(int a){
+        if(a >= 18){
+            return "Você é MAIOR de idade!";
         }
         else{
-            System.out.println("Este número é IMPAR!");
+            return "Você é MENOR de idade!";
         }
-        scanner.nextLine();
-        
-        //Exercício 2
-        
-        System.out.println("Insira sua idade!");
-        int idade = scanner.nextInt();
-        if(idade >= 18){
-            System.out.println("Você é maior de idade!");
-        }
-        else{
-            System.out.println("Você é menor de idade!");
-        }
-        scanner.nextLine();
-        
-        //Exercício 3
-        
-        System.out.println("Insira seu salário!");
-        float salario = scanner.nextFloat();
-        if(salario <= 1000.00){
-            salario *= 1.1;
-            System.out.println("Seu salário com bônus de 10%!" + salario);
+    }
+    
+    /* Função Exércicio 3 */
+    
+    public static void lerSalario(float a){
+        if(a <= 1000.00){
+            a *= 1.1;
+            System.out.println("Seu salário com bônus de 10%: " + a);
         }
         else{
-            salario *= 1.05;
-            System.out.println("Seu salário com bônus de 5%" + salario);
+            a *= 1.05;
+            System.out.println("Seu salário com bônus de 5%: " + a);
         }
-        scanner.nextLine();
-        
-        //Exercícios SWITCH CASE
-        
-        //Exercício 4
-        
-        System.out.println("Digite um número de 1 a 7:");
-        int data = scanner.nextInt();
-        switch(data){
+    }
+    
+    /* Função Exércicio 4 */
+    
+    public static String lerSemana(int a){
+        switch(a){
             case 1:
-                System.out.println("Segunda-Feira");
-                break;
+                return "É Segunda-Feira";   
             case 2:
-                System.out.println("Terça-Feira");
-                break;
+                return "É Terça-Feira";                
             case 3:
-                System.out.println("Quarta-Feira");
-                break;
+                return "É Quarta-Feira";
             case 4:
-                System.out.println("Quinta-Feira");
-                break;
+                return "É Quinta-Feira";   
             case 5:
-                System.out.println("Sexta-Feira");
-                break;
+                return "É Sexta-Feira";    
             case 6:
-                System.out.println("Sábado");
-                break;
+                return "É Sábado";              
             case 7:
-                System.out.println("Domingo");
-                break;
+                return "É Domingo";            
             default:
-                System.out.println("Número não esta no intervalo de 1 a 7");
+                return "Este número não esta no intervalo de 1 a 7";
         }
-        scanner.nextLine();
-        
-        //Exercício 5
-        
-        System.out.println("Digite um número de 1 a 12:");
-        int mes = scanner.nextInt();
-        switch(mes){
+    }
+    
+    /* Função Exércicio 5 */
+    
+    public static String lerMes(int a){
+       switch(a){
             case 1:
-                System.out.println("Janeiro");
-                break;
+                return "Janeiro";
             case 2:
-                System.out.println("Fevereiro");
-                break;
+                return "Fevereiro";
             case 3:
-                System.out.println("Março");
-                break;
+                return "Março";
             case 4:
-                System.out.println("Abril");
-                break;
+                return "Abril";
             case 5:
-                System.out.println("Maio");
-                break;
+                return "Maio";
             case 6:
-                System.out.println("Junho");
-                break;
+                return "Junho";
             case 7:
-                System.out.println("Julho");
-                break;
+                return "Julho";
             case 8:
-                System.out.println("Agosto");
-                break;
+                return "Agosto";
             case 9:
-                System.out.println("Setembro");
-                break;
+                return "Setembro";
             case 10:
-                System.out.println("Outubro");
-                break;
+                return "Outubro";
             case 11:
-                System.out.println("Novembro");
-                break;
+                return "Novembro";
             case 12:
-                System.out.println("Dezembro");
-                break;
+                return "Dezembro";
             default:
-                System.out.println("Número não esta no intervalo de 1 a 12");
+                return "Número não esta no intervalo de 1 a 12";
         }
-        scanner.nextLine();
-        
-        //Exercício 6
-        
-        System.out.println("Digite um número de 1 a 3:");
-        int codigo = scanner.nextInt();
-        double produto = 50.0;
-        switch(codigo){
-            case 1:
+    }
+    
+    /* Função Exércicio 6 */
+    
+    public static void lerDesconto(int a, float produto){
+       switch(a){
+           case 1:
                 produto *= 0.95;
                 System.out.println("Seu Produto 5% de desconto e custa: " + produto);
                 break;
@@ -156,111 +120,97 @@ public class Exercicio2 {
             default:
                 System.out.println("Número não esta no intervalo de 1 a 3");
         }
-        scanner.nextLine();
-        
-        //Exercícios WHILE
-        
-        //Exercício 7
-        System.out.println("Digite um número inteiro maior que 0");
-        int contador = 0;
-        int contagem = scanner.nextInt();
-        while(contador < contagem){
-            contador += 1;
-            System.out.println(contador);
-        }
-        
-        //Exercício 8
-        
-        System.out.println("Digite números inteiros: ");
-        int soma = scanner.nextInt();
-        int resultado = 0;
-        while(soma > 0){
-            resultado += soma;
-            soma = scanner.nextInt();
-        }
-         System.out.println("O resultado desta soma é: " + resultado);
-         scanner.nextLine();
+    }
     
-        //Exercício 9
- 
-        int sorteio = random.nextInt(100) + 1;
-        System.out.print("Digite um número entre 1 e 100: ");
-        int tentativa = scanner.nextInt();
-        while(sorteio != tentativa){
-           if(tentativa > sorteio){
+    /* Função Exércicio 7 */
+    
+    public static void lerInteiro(int a, int b){
+        while(a < b){
+            a += 1;
+            System.out.println(b);
+        }
+    }
+    
+    /* Função Exércicio 8 */
+    
+    public static void lerInteiros(int a, int b){
+        while(a > 0){
+            b += a;
+            a = scanner.nextInt();
+        }
+         System.out.println("O resultado desta soma é: " + b);
+    }
+    
+    /* Função Exércicio 9 */
+    
+    public static void lerTentativa(int a, int b){
+        while(a != b){
+           if(b > a){
                System.out.println("O número é menor");
            }
            else{
                System.out.println("O número é maior");
            }
-           tentativa = scanner.nextInt();
+           b = scanner.nextInt();
         }
         System.out.println("Parabéns você acertou!");
-        scanner.nextLine();
-        
-        //Exercícios DO WHILE
-        
-        //Exercicio 10
-        
-        System.out.print("Digite um número inteiro maior que 0: ");
-        int contagem_2 = scanner.nextInt();
+    }
+    
+    /* Função Exércicio 10 */
+    
+    public static void lerInteiroDW(int a){
         do{
-            System.out.println(contagem_2);
-            contagem_2 -= 1;  
+            System.out.println(a);
+            a -= 1;  
         }
-        while(contagem_2 >= 1);
-        scanner.nextLine();    
-        
-        //Exercicio 11
-        
-         System.out.print("Digite uma senha: ");
-         String senha1 = scanner.nextLine();
-         String senha2; 
-         do{
+        while(a >= 1);
+    }
+    
+    /* Função Exércicio 11 */
+    
+    public static void lerSenha(String a){
+        String senha;
+        do{
              System.out.print("Digite sua senha novamente!: ");
-             senha2 = scanner.nextLine();
-             if(!senha2.equals(senha1)){
+             senha = scanner.nextLine();
+             if(!senha.equals(a)){
                  System.out.println("Senha incorreta! Tente novamente");
              }
              else{
                  System.out.println("Senha correta!");
              }
          }
-         while(!senha2.equals(senha1));
-         scanner.nextLine();
-        
-        //Exercicio 12
-        
-        int sorteio1 = random.nextInt(100) + 1;
-        System.out.print("Digite um número entre 1 e 100: ");
-        int tentativa1 = scanner.nextInt();
+         while(!senha.equals(a));
+    }
+    
+    /* Função Exércicio 12 */
+    
+    public static void lerSorteio(int a, int b){
         do{
-             if(tentativa1 > sorteio1){
+             if(b > a){
                System.out.println("O número é menor");
            }
            else{
                System.out.println("O número é maior");
            }
-           tentativa1 = scanner.nextInt();
+           b = scanner.nextInt();
         }
-        while(sorteio1 != tentativa1);         
+        while(a != b);         
         System.out.println("Parabéns você acertou!");
-        scanner.nextLine();
-        
-        //Exercícios FOR
-        
-        //Exercicio 13
-        
-        System.out.print("Digite um número inteiro: ");
-        int mult = scanner.nextInt();
-        for(int i = 0; i <= mult; i ++){
-            int resultado2 = i * mult;
+    }
+    
+    /* Função Exércicio 13 */
+    
+    public static void lerInteiroFOR(int a){
+        for(int i = 0; i <= a; i ++){
+            int resultado2 = i * a;
             System.out.println(resultado2);
         }
-        scanner.nextLine();
-        
-        //Exercicio 14
-        
+    }
+    
+    /* Função Exércicio 14 */
+    
+    public static void anoNovo(){
         for(int i = 0; i <= 10; i++){
             System.out.println(i);
             try {
@@ -270,9 +220,11 @@ public class Exercicio2 {
             }
         }
         System.out.println("FELIZ ANO NOVO!");
-        
-        //Exercicio 15
-        
+    }
+    
+    /* Função Exércicio 15 */
+    
+    public static void lerPares(){
         int somaPares = 0;
         for(int i = 2; i <= 100; i += 2){
             System.out.println(i);
@@ -280,6 +232,5 @@ public class Exercicio2 {
         }
         System.out.println("A soma dos numéros pares entre 1 a 100 é: "
         + somaPares);
-        
     }
 }
