@@ -6,10 +6,10 @@ package com.mycompany.objetos;
 
 /**
  *
- * @author marci
+ * @author alunodev10
  */
 public class main {
-    
+        
     public static void main(String[] args) {
         //Exércicio 1//
         
@@ -50,7 +50,16 @@ public class main {
         
         //Exércicio 4//
         
-
+        /*Carro carro1 = new Carro("Honda", "Hondinha", 2025);
+        Carro carro2 = new Carro("Chevrolet", "Chevroletinho", 2007);
+        
+        carro1.print();
+        carro2.print();
+        Carro.corrida(carro1, carro2, 50, 30, 0, 20);*/
+        
+        //Exércicio 5//
+        
+        Aluno aluno1 = new Aluno(); 
 
         
 
