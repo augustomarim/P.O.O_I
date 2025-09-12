@@ -6,11 +6,10 @@ package com.mycompany.objetos;
 
 /**
  *
- * @author marci
+ * @author alunolab10
  */
 public class main {
-    
-            
+      
     public static void main(String[] args) {
         //Exércicio 1//
         
@@ -79,7 +78,7 @@ public class main {
         
         //Exércicio 7//
         
-        Biblioteca biblioteca = new Biblioteca();
+        /*Biblioteca biblioteca = new Biblioteca();
         Livro livro1 = new Livro("Jogos Vorazes", "Alguem");
         Livro livro2 = new Livro("Morellonomicon", "Riot Games");
         Livro livro3 = new Livro("Talk that Talk", "Twice");
@@ -95,18 +94,17 @@ public class main {
         livro1.devolver();
         livro3.devolver();
 
-        biblioteca.mostrar();
+        biblioteca.mostrar();*/
 
+        //Exércicio 8//
+        
+        Calculadora.soma(2, 2);
+        Calculadora.subtracao(2, 2);
+        Calculadora.multiplicacao(2, 2);
+        Calculadora.divisao(2, 2);
 
 
 
         
     }
-
-
-        
-
-
-        
 }
-
