@@ -6,10 +6,11 @@ package com.mycompany.objetos;
 
 /**
  *
- * @author alunodev10
+ * @author marci
  */
 public class main {
-        
+    
+            
     public static void main(String[] args) {
         //Exércicio 1//
         
@@ -59,11 +60,53 @@ public class main {
         
         //Exércicio 5//
         
-        Aluno aluno1 = new Aluno(); 
+        /*Aluno aluno1 = new Aluno(); 
+        Aluno aluno2 = new Aluno(); 
+        Aluno aluno3 = new Aluno(); 
+        aluno1.media();
+        aluno2.media();
+        aluno3.media();*/
 
+        //Exércicio 6//
         
+        /*Retangulo retangulo1 = new Retangulo(10, 10);
+        Retangulo retangulo2 = new Retangulo(5, 5);
+        double a = retangulo1.area();
+        double b = retangulo2.area();
+        retangulo1.perimetro();
+        retangulo2.perimetro();
+        Retangulo.maior(a, b);*/
+        
+        //Exércicio 7//
+        
+        Biblioteca biblioteca = new Biblioteca();
+        Livro livro1 = new Livro("Jogos Vorazes", "Alguem");
+        Livro livro2 = new Livro("Morellonomicon", "Riot Games");
+        Livro livro3 = new Livro("Talk that Talk", "Twice");
+        
+        biblioteca.adicionar(livro1);
+        biblioteca.adicionar(livro2);
+        biblioteca.adicionar(livro3);
+
+        biblioteca.mostrar();
+        
+        livro1.emprestar();
+        livro2.emprestar();
+        livro1.devolver();
+        livro3.devolver();
+
+        biblioteca.mostrar();
+
+
 
 
         
     }
+
+
+        
+
+
+        
 }
+

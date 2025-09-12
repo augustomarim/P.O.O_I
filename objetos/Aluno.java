@@ -3,12 +3,14 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package com.mycompany.objetos;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+
 /**
  *
- * @author alunodev10
+ * @author marci
  */
 public class Aluno {
     Scanner scanner = new Scanner(System.in);
@@ -21,7 +23,40 @@ public class Aluno {
         nome = scanner.nextLine();
         while(notas.size() < 2){
             System.out.print("Notas do Aluno: ");
-            notas.add(scanner.nextDouble());
+            double nota = scanner.nextDouble();
+            if(nota <= 10 && nota >= 0){
+                notas.add(nota);
+            }
+            else{
+                System.out.println("Nota invalida!");
+            }
+            
         }
     }
+    
+    public String getNome(){
+        return this.nome;
+    }
+    
+    public void media(){
+        double soma = 0;
+        for(double i : notas){
+            soma += i;
+        }
+        double media = soma / notas.size();
+        System.out.println("Media do Aluno " + nome + " é: " +  media);
+        if(media >= 7){
+            System.out.println("Aprovado");
+        }
+        else{
+            System.out.println("Reprovado");
+        }
+    }
+    
+    
+    
+    
+    
+    
+    
 }
