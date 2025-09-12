@@ -7,13 +7,13 @@ import java.util.ArrayList;
 import java.util.List;
 /**
  *
- * @author alunolab10
+ * @author marci
  */
 public class Agenda {
     private List<Contato> contatos;
     
     public Agenda(){
-        contatos = new Arraylist<>();
+        contatos = new ArrayList<>();
     }
     
     public void adicionar(Contato contato){
@@ -27,6 +27,12 @@ public class Agenda {
     }
     
     public void buscar(String nome){
-        for(int i = 0, i < )
+        for(int i = 0; i < contatos.size(); i++ ){
+            Contato c = contatos.get(i);
+            if(c.getNome().equals(nome)){
+                System.out.println("Nome: " + c.getNome() +
+                                   "\nNúmero: " + c.getNumero());
+            }
+        }
     }
 }

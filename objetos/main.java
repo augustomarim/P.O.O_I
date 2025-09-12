@@ -6,10 +6,11 @@ package com.mycompany.objetos;
 
 /**
  *
- * @author alunolab10
+ * @author marci
  */
 public class main {
-      
+    
+            
     public static void main(String[] args) {
         //Exércicio 1//
         
@@ -98,13 +99,36 @@ public class main {
 
         //Exércicio 8//
         
-        Calculadora.soma(2, 2);
+        /*Calculadora.soma(2, 2);
         Calculadora.subtracao(2, 2);
         Calculadora.multiplicacao(2, 2);
-        Calculadora.divisao(2, 2);
+        Calculadora.divisao(2, 2);*/
 
+        //Exércicio 9//
+        
+        /*Contato contato1 = new Contato("A", "122");
+        Agenda agenda = new Agenda();
+        agenda.adicionar(contato1);
+        agenda.buscar("A");*/
+        
+        //Exércicio 10//
+        
+        Personagem personagem1 = new Personagem("Lux", 100, 20);
+        Personagem personagem2 = new Personagem("Ahri", 100, 10);
+        Personagem.luta(personagem1, personagem2);
+        
+    }
+        
+        
 
 
         
-    }
 }
+
+
+        
+
+
+        
+
+

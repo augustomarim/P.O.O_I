@@ -6,8 +6,22 @@ package com.mycompany.objetos;
 
 /**
  *
- * @author alunolab10
+ * @author marci
  */
 public class Contato {
+    private String nome;
+    private String numero;
     
+    public Contato(String nome, String numero){
+        this.nome = nome;
+        this.numero = numero;
+    }
+    
+    public String getNome(){
+        return this.nome;
+    }
+    
+    public String getNumero(){
+        return this.numero;
+    }
 }
