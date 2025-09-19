@@ -8,20 +8,15 @@ import java.util.Scanner;
 
 /**
  *
- * @author alunolab10
+ * @author augus
  */
 public class main {
     static Scanner scanner = new Scanner(System.in);
     static Banco banco = new Banco();
     
     public static void main(String[] args) {
-      ContaBancaria conta = new ContaBancaria("a", 123);
-      ContaBancaria conta1 = new ContaBancaria("a", 123);
-
-      banco.adicionarConta(conta);
-      banco.adicionarConta(conta1);
-
-      
+      ContaBancaria conta = new ContaBancaria();
+      banco.adicionarConta(conta);    
       banco.mostrar();
     }
 }

@@ -3,14 +3,18 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package com.mycompany.contabancaria;
+
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
+
 /**
  *
- * @author alunolab10
+ * @author augus
  */
 public class Banco {
-     private List<ContaBancaria> contas;
+    Scanner scanner = new Scanner(System.in); 
+    private List<ContaBancaria> contas;
     
     public Banco(){
         contas = new ArrayList<>();
@@ -32,6 +36,23 @@ public class Banco {
             System.out.println("\n --- \n");
 
                                 
+        }
+    }
+    
+    public void depositar(){
+        System.out.println("Qual Conta você irá depositar: ");
+        String nome = scanner.nextLine();
+        int contador = 0;
+        for(int i = 0; i < contas.size(); i++){
+           if(contas.get(i).getTitular().equals(nome)){
+                System.out.print("Qual o valor do deposito:");
+                double valor = scanner.nextDouble();
+                contas.get(i).deposito(valor); 
+                contador ++;
+            }  
+        }
+        if(contador == 0){
+            System.out.println("ESSA CONTA NÃO EXISTE LOSER!");
         }
     }
 }
