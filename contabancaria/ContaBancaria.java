@@ -62,4 +62,8 @@ public class ContaBancaria {
     public int getNumero(){
         return numero;
     }
+    
+    public void deposito(double saldo){
+        this.saldo += saldo;
+    }
 }
